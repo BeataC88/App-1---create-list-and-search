@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista drużyn </title>
+
+    <style>
+        body {
+            margin-left: 20px;
+        }
+
+        .team-name {
+            margin: 10px;
+            font-size: 20px;
+        }
+
+        form {
+            margin-top: 5px;
+        }
+
+        .add button {
+            width: 150px;
+            height: 40px;
+            background-color: #1FCFDE;
+            border-radius: 5px;
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        input {
+            width: 300px;
+            height: 30px;
+            font-size: 20px;
+            border: 3px solid black;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        button.remove {
+            width: 150px;
+            height: 40px;
+            background-color: #DE1F32;
+            border-radius: 5px;
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        .deleteTeam {
+            width: 30px;
+            height: 30px;
+            background-color: #DE1F32;
+            border-radius: 5px;
+            font-size: 15px;
+            margin-left: 10px;
+        }
+
+        .team-list {
+            font-size: 40px;
+        }
+
+        ul {
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        span {
+            font-weight: 700;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="team-name">Enter team's name: </div>
+    <form class="add">
+        <input type="text">
+        <button>Add team</button>
+    </form>
+
+    <div class="team-name">Find team: </div>
+    <input type="text" class="search">
+    <div>
+        <button class="remove">Remove all teams</button>
+    </div>
+
+    <div class="team-list">Currently list includes <span> --- </span> teams</div>
+    <ul>
+
+    </ul>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
