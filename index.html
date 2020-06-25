@@ -9,6 +9,7 @@
     <style>
         body {
             margin-left: 20px;
+            height: 10000vh;
         }
 
         .team-name {
@@ -48,6 +49,16 @@
             margin-bottom: 30px;
         }
 
+        button.random {
+            width: 280px;
+            height: 40px;
+            background-color: #F1B407;
+            border-radius: 5px;
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
         .deleteTeam {
             width: 30px;
             height: 30px;
@@ -74,13 +85,13 @@
 </head>
 
 <body>
-    <div class="team-name">Enter team's name: </div>
+    <div class="team-name">Enter Premiership team's name: </div>
     <form class="add">
         <input type="text">
         <button>Add team</button>
     </form>
 
-    <div class="team-name">Find team: </div>
+    <div class="team-name">Search team: </div>
     <input type="text" class="search">
     <div>
         <button class="remove">Remove all teams</button>
@@ -90,6 +101,8 @@
     <ul>
 
     </ul>
+
+    <button class="random">Random Premier League Champion in 2021</button>
 
     <script src="main.js"></script>
 
