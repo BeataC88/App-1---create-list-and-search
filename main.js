@@ -13,15 +13,22 @@ const championName = document.createElement('div');
 
 const randomChampion = () => {
     championName.textContent = "";
+    if (teamsToRandom.length == 0) {
+        alert('brak drużyn w tabeli!');
+        return
+    }
     const indexToRandom = Math.floor(Math.random() * teamsToRandom.length);
+    console.log(indexToRandom)
     document.body.appendChild(championName);
     championName.style.fontSize = '30px';
     championName.style.fontWeight = '700';
     championName.textContent = `And the Champion is ${teamsToRandom[indexToRandom]}`;
+
 }
 
 const removeAllTeams = () => {
     teamArr.length = 0;
+    teamsToRandom.length = 0;
     ul.textContent = "";
     teamNumber.textContent = liList.length;
     championName.textContent = "";
@@ -30,6 +37,7 @@ const removeAllTeams = () => {
 const removeOneTeam = (e) => {
     const index = e.target.parentNode.dataset.key;
     teamArr.splice(index, 1);
+    teamsToRandom.splice(index, 1);
     // console.log(teamArr);
     // console.log(index);
     refreshList();
@@ -40,7 +48,10 @@ const addTeam = (e) => {
     e.preventDefault();
     number++;
     const teamName = inputToEnter.value.toUpperCase();
-    if (teamName === "") return;
+    if (teamName === "") {
+        alert('Puste pole, wpisz drużynę!')
+        return;
+    }
     const team = document.createElement('li');
     team.className = "team";
     team.style.listStyleType = "none";
